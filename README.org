@@ -1,0 +1,54 @@
+#+TITLE: maxima layer
+# Document tags are separated with "|" char
+# The example below contains 2 tags: "layer" and "web service"
+# Avaliable tags are listed in <spacemacs_root>/.ci/spacedoc-cfg.edn
+# under ":spacetools.spacedoc.config/valid-tags" section.
+#+TAGS: layer|web service
+
+# The maximum height of the logo should be 200 pixels.
+[[img/maxima_emacs.png]]
+
+# TOC links should be GitHub style anchors.
+* Table of Contents                                        :TOC_4_gh:noexport:
+- [[#description][Description]]
+  - [[#features][Features:]]
+- [[#install][Install]]
+- [[#key-bindings][Key bindings]]
+
+* Description
+This layer adds support for [[https://maxima.sourceforge.io/][maxima]] via [[https://gitlab.com/sasanidas/maxima][maxima.el]].
+
+** Features:
+  - Autocomplete
+
+* Install
+
+To use this configuration layer, clone it to your =spacemacs-private-directory=
+either from the command line with
+#+begin_src emacs-lisp
+  git clone https://github.com/dalanicolai/maxima-layer.git .emacs.d/private/maxima
+#+end_src
+(where you can substitute the path for your private directory if you do not use
+the default path),
+
+or from Spacemacs with
+
+=M-: (shell-command (format "git clone
+https://github.com/dalanicolai/maxima-layer.git %s/maxima" spacemacs-private-directory))=.
+
+
+Subsequently add =maxima= to your =~/.spacemacs=. You will need to
+add =maxima= to the existing =dotspacemacs-configuration-layers= list in this
+file.
+
+* Key bindings
+
+| Key Binding | Description  |
+|-------------+--------------|
+| ~TAB~       | Autocomplete |
+
+# Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
+# Examples:
+# [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
+# [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
+# If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
