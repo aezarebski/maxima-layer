@@ -97,7 +97,13 @@ Each entry is either:
       (spacemacs/declare-prefix-for-mode mode "mh" "help")
       (spacemacs/set-leader-keys-for-major-mode mode
         "hd" 'maxima-help
-        "ha" 'maxima-apropos))))
+        "ha" 'maxima-apropos
+        "hp" 'maxima-help-at-point)
+      (spacemacs/declare-prefix-for-mode mode "ms" "repl")
+      (spacemacs/set-leader-keys-for-major-mode mode
+        "si" 'maxima
+        "sb" 'maxima-send-buffer
+        "sr" 'maxima-send-region))))
 
 ;; (defun maxima/pre-init-ob-maxima ()
 ;;   (spacemacs|use-package-add-hook org
