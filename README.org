@@ -14,6 +14,9 @@
   - [[#features][Features:]]
 - [[#install][Install]]
 - [[#key-bindings][Key bindings]]
+  - [[#autocomplete][Autocomplete]]
+  - [[#help][Help]]
+  - [[#inferior-repl-process][Inferior REPL process]]
 
 * Description
 This layer adds support for [[https://maxima.sourceforge.io/][maxima]] via [[https://gitlab.com/sasanidas/maxima][maxima.el]].
@@ -25,9 +28,11 @@ This layer adds support for [[https://maxima.sourceforge.io/][maxima]] via [[htt
 
 To use this configuration layer, clone it to your =spacemacs-private-directory=
 either from the command line with
-#+begin_src emacs-lisp
+
+#+begin_src shell
   git clone https://github.com/dalanicolai/maxima-layer.git .emacs.d/private/maxima
 #+end_src
+
 (where you can substitute the path for your private directory if you do not use
 the default path),
 
@@ -43,12 +48,33 @@ file.
 
 * Key bindings
 
-| Key Binding | Description  |
-|-------------+--------------|
-| ~TAB~       | Autocomplete |
-
 # Use GitHub URLs if you wish to link a Spacemacs documentation file or its heading.
 # Examples:
 # [[https://github.com/syl20bnr/spacemacs/blob/master/doc/VIMUSERS.org#sessions]]
 # [[https://github.com/syl20bnr/spacemacs/blob/master/layers/%2Bfun/emoji/README.org][Link to Emoji layer README.org]]
 # If space-doc-mode is enabled, Spacemacs will open a local copy of the linked file.
+
+** Autocomplete
+
+| Key Binding | Description  |
+|-------------+--------------|
+| ~TAB~       | Autocomplete |
+
+** Help
+
+| Key Binding | Description                    |
+|-------------+--------------------------------|
+| ~SPC m h a~ | help apropos                   |
+| ~SPC m h d~ | Get help of the desired symbol |
+| ~SPC m h p~ | Get help at point              |
+
+** Inferior REPL process
+
+Send code to inferior process with these commands:
+
+| Key Binding | Description                                    |
+|-------------+------------------------------------------------|
+| ~SPC m s i~ | Run Maxima interactively                       |
+| ~SPC m s b~ | Send the buffer to the Maxima process          |
+| ~SPC m s r~ | Send the current region  to the Maxima process |
+
